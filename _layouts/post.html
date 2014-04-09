@@ -8,12 +8,23 @@ layout: default
 	</h2>
 	<p class="meta">{{ page.date | date_to_string }}</p>
 	<div  class="post">
-		<span itemprop="articleSection">{{ page.categories | array_to_sentence_string }}</span>
+		<div itemprop="articleSection">
+			Category print example: <br/>
+			{{ page.categories | array_to_sentence_string }}
+		</div>
 		
-		<span itemprop="articleBody">{{ content }}</span>
+		<div itemprop="articleBody">			
+			{{ content }}
+		</div>
 
-		<span itemprop="keywords">{{ page.tags | array_to_sentence_string }}</span>
+		<div itemprop="keywords">
+			Tags print example: <br/>
+			{{ page.tags | array_to_sentence_string }}
+		</div>
 
-		<span itemprop="wordCount">{{ page.content | number_of_words }}</span>
+		<div itemprop="wordCount">
+			Num of words print example: <br/>
+			{{ page.content | number_of_words }}
+		</div>
 	</div> 
 </span>
