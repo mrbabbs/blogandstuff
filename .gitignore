@@ -1,1 +1,6 @@
+
+# file to ignore on github
+# ubuntu temp file
 *~
+# everithing inside "_site" directory
+_site/**
