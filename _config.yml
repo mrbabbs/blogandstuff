@@ -1,3 +1,10 @@
 name: "Blog&stuff"
 markdown: redcarpet
 pygments: true
+
+authors:
+  fenix:
+    display_name: Francesco Esposito
+    email: fraesps@gmail.com
+
+# add next author like fenix

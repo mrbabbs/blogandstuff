@@ -4,6 +4,7 @@ title:  "Test Post!"
 date:   2014-04-06 13:19:57
 categories: jekyll update
 tags: jekyll post esempio
+author: fenix
 ---
 
 You'll find this post in your `_posts` directory - edit this post and re-build 
