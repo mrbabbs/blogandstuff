@@ -1,10 +1,11 @@
 name: "Blog&stuff"
 markdown: redcarpet
 pygments: true
+paginate: 5
 
 authors:
   fenix:
     display_name: Francesco Esposito
     email: fraesps@gmail.com
 
-# add next author like fenix
+# add next author like fenix, n.b. use 2 spaces to have a tab
