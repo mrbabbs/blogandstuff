@@ -2,11 +2,8 @@
 layout: post
 title:  "Test Post 2"
 date:   2014-04-11
-categories: 
-- jekyll 
-- update
+categories: categoria
 tags: test tag prova 
-
 author: fenix
 ---
 

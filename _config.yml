@@ -1,7 +1,7 @@
 name: "Blog&stuff"
 markdown: redcarpet
 pygments: true
-paginate: 5
+paginate: 3
 
 authors:
   fenix:
