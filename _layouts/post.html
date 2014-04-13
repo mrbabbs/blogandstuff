@@ -4,37 +4,38 @@ layout: default
 
 {% assign author = site.authors[page.author] %}
 <article itemscope itemtype="http://schema.org/BlogPosting">
-	<header>
-		<h2 itemprop="name">{{ page.title }}
-	  			by <span itemprop="author">{{ author.display_name }}</span>
-		</h2>
-		<span class="no-display" itemprop="dateCreated">{{ page.date }}</span>
-		<p>
-			<span class="meta day">{{ page.date | date: "%d" }}</span>
-			<span class="meta month">{{ page.date | date: "%B" }}</span>
-			<span class="meta year">{{ page.date | date: "%Y" }}</span>
-		</p>
-	</header>
-	<section>
-		<div  class="post">
-			<div itemprop="articleSection">
-				Category print example: <br/>
-				{{ page.categories | array_to_sentence_string }}
-			</div>
-			
-			<div itemprop="articleBody">			
-				{{ content }}
-			</div>
+    <header>
+        <h2 itemprop="name">{{ page.title }}
+            by <span itemprop="author"> {{ author.display_name }} </span>
+        </h2>
+        <span class="no-display" itemprop="dateCreated">{{ page.date }}</span>
+        <p>
+            <span class="meta day">{{ page.date | date: "%d" }}</span>
+            <span class="meta month">{{ page.date | date: "%B" }}</span>
+            <span class="meta year">{{ page.date | date: "%Y" }}</span>
+        </p>
+    </header>
+    <section>
+        <div  class="post">
+            <div itemprop="articleSection">
+                Category print example: <br/>
+                {{ page.categories | array_to_sentence_string }}
+            </div>
 
-			<div itemprop="keywords">
-				Tags print example: <br/>
-				{{ page.tags | array_to_sentence_string }}
-			</div>
+            <div itemprop="articleBody">			
+                {{ content }}
+            </div>
 
-			<div itemprop="wordCount">
-				Num of words print example: <br/>
-				{{ page.content | number_of_words }}
-			</div>
-		</div> 
-	</section>
+            <div itemprop="keywords">
+                Tags print example: <br/>
+                {{ page.tags | array_to_sentence_string }}
+            </div>
+
+            <div itemprop="wordCount">
+                Num of words print example: <br/>
+                {{ page.content | number_of_words }}
+            </div>
+        </div> 
+    </section>
 </article>
+
