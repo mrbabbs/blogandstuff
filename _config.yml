@@ -2,12 +2,15 @@
 name: "Blog&stuff"
 markdown: redcarpet
 pygments: true
-  
+
 # authors - add a new author like fenix
 authors:
-  fenix:
-    display_name: Francesco Esposito
-    email: fraesps@gmail.com
+    fenix:
+        display_name: Francesco Esposito
+        email: fraesps@gmail.com
+    mrbabbs:
+        display_name: Giovanni Esposito
+        email: gioespsçgmail.com
 
 # pretty links
 permalink: '/:year/:title'
@@ -18,5 +21,7 @@ paginate_path: '/page:num'
 
 # include of new folder "_pages" where we can write our markdown pages
 include: ['_pages'] 
+
 # this is used to follow the permalink var in each page 
 relative_permalinks: false
+
