@@ -2,7 +2,7 @@ blogandstuff
 ============
 
 
-justa jekyll blog project
+just a jekyll blog project
 
 
 Regole di formattazione
@@ -15,3 +15,4 @@ Per dare una certa regolarità e chiarezza nel codice, diamoci alcune regole su 
  * Lasciare una linea vuota alla fine del file.
  * Le linee vuote non devono contenere spazi.
  * Commentare in modo chiaro il codice laddove è necessario per la manutenzione.
+ * magari scrivi tutto in inglese (compreso questo?)

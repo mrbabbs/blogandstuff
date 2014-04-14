@@ -24,4 +24,3 @@ include: ['_pages']
 
 # this is used to follow the permalink var in each page 
 relative_permalinks: false
-
