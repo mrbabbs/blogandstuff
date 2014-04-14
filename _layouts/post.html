@@ -1,5 +1,6 @@
 ---
 layout: default
+title: category
 ---
 
 {% assign author = site.authors[page.author] %}
@@ -20,6 +21,7 @@ layout: default
 			<div itemprop="articleSection">
 				Category print example: <br/>
 				{{ page.categories | array_to_sentence_string }}
+				{{ page.url }}
 			</div>
 			
 			<div itemprop="articleBody">			

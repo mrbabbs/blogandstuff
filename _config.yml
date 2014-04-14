@@ -2,7 +2,7 @@
 name: "Blog&stuff"
 markdown: redcarpet
 pygments: true
-  
+excerpt_separator: "<!-- more -->"
 # authors - add a new author like fenix
 authors:
   fenix:

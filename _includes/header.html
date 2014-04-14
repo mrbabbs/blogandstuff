@@ -4,10 +4,9 @@
 			<a href="/">{{ site.name }}</a>
 		</h1>
 		<ul>
-			<li>				
-				<a href="/about/">About</a>
-				<a href="/contact/">Contact</a>
-			</li>
+			<li><a {% if page.url == '/about/' %}class="active" {% endif %}href="/about/">About</a></li>
+			<li><a {% if page.url == '/contact/' %}class="active" {% endif %}href="/contact/">Contact</a></li>
+			<li><a {% if page.url == '/category/' %}class="active" {% endif %}href="/category/">Category</a></li>
 		</ul>
 	</nav>
 </header>
