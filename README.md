@@ -5,14 +5,14 @@ blogandstuff
 just a jekyll blog project
 
 
-Regole di formattazione
+General code style
 -----------------------
 
-Per dare una certa regolarità e chiarezza nel codice, diamoci alcune regole su come formattarlo. Questo è un elenco di alcune regole maggiornmente utilizzate:
+Simple roles useful writing simple and understable code.
+List of roles:
 
- * Utilizzare 4 spazi per il tab.
- * Lasciare sempre uno spazio tra il tag e il contenuto.
- * Lasciare una linea vuota alla fine del file.
- * Le linee vuote non devono contenere spazi.
- * Commentare in modo chiaro il codice laddove è necessario per la manutenzione.
- * magari scrivi tutto in inglese (compreso questo?)
+ * Using 4 spaces instead of tabs.
+ * Leaving empty space between tag and content.
+ * Empty line at the end of files.
+ * The empty lines doesn't contain spaces.
+ * Write comments where it is important to understant and maintance code.
