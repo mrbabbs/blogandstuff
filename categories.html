@@ -1,22 +1,7 @@
 ---
-permalink: /category/
+permalink: /categories/
 layout: default
 title:  Categories
 ---
 
-{% if (include.category) %}
-	{% for posts in include.category.posts %}
-		{{ posts }}
-	{% endfor %}
-{% endif %}
-
-{% for cat in site.categories %}
-	<a href="">{{cat | first}}</a>
-	{% include category param="{{cat | first}}" %}
-
-{% endfor %}
-
-
-{% for cat in site.tags %}
-    <p>{{cat | first}}</p>
-{% endfor %}
+ 
