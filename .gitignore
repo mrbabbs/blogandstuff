@@ -10,5 +10,6 @@ _site/**
 # that's better starting writing our own post for testing purpose
 _posts/**
 
-# jekyll is always regenerating this folder content
+# jekyll is always regenerating this folder content except "index.html"
 categories/**
+!categories/index.html
