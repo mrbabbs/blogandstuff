@@ -1,0 +1,13 @@
+---
+permalink: /categories/
+layout: default
+title:  Categories
+---
+
+<ul>
+	{% for cat in site.categories %}
+		<li>
+			<a href="{{ cat[0] }}.html">{{cat[0]}}</a>
+		</li>
+	{% endfor %}
+</ul>
