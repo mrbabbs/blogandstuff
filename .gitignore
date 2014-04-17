@@ -1,6 +1,14 @@
 
 # file to ignore on github
+
 # ubuntu temp file
 *~
+
 # everithing inside "_site" directory
 _site/**
+
+# that's better starting writing our own post for testing purpose
+_posts/**
+
+# jekyll is always regenerating this folder content
+categories/**

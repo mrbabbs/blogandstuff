@@ -4,8 +4,8 @@
 
 =end 
 
-$cat_folder = "/categories/"      # categories folder
-$template = "layout.html"         # filename of the template (to put in $cat_folder)
+$cat_folder = "/categories/"                    # categories folder
+$template = "/_layouts/categories.html"          # filename of the template (to put in $cat_folder)
 
 
 module Jekyll
@@ -23,7 +23,7 @@ module Jekyll
         end
       end
       site.categories.each do |category|              # for each category write it in the proper file
-        input = site.source + $cat_folder+$template
+        input = site.source + $template
         output = site.source + $cat_folder + category[0]+".html"
         self.copy_template(input,output)              # create a file for each category in the $cat_folder
         curr = category[0]+".html"        
