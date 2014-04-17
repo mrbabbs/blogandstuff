@@ -4,5 +4,3 @@
 *~
 # everithing inside "_site" directory
 _site/**
-# before to commit i need to test a lot 
-_plugins/**
