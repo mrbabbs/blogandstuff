@@ -27,3 +27,6 @@ relative_permalinks: false
 
 # folder to store post by categories N.B. if it has to be changed look up the "_plugins/categories.rb" file
 cat_folder: "/categories/"
+
+# folder to store post by tags N.B. if it has to be changed look up the "_plugins/tags.rb" file
+tag_folder: "/tags/"

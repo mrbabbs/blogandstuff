@@ -5,11 +5,11 @@
 =end 
 
 $cat_folder = "/categories/"                    # categories folder
-$template = "/_layouts/categories.html"          # filename of the template (to put in $cat_folder)
+$cat_template = "/_layouts/categories.html"          # filename of the template (to put in $cat_folder)
 
 
 module Jekyll
-  class ArchivesGenerator < Generator
+  class CategoryGenerator < Generator
 
     def generate(site)
       categories = {}      
@@ -23,10 +23,10 @@ module Jekyll
         end
       end
       site.categories.each do |category|              # for each category write it in the proper file
-        input = site.source + $template
-        output = site.source + $cat_folder + category[0]+".html"
-        self.copy_template(input,output)              # create a file for each category in the $cat_folder
-        curr = category[0]+".html"        
+        curr = category[0].gsub(" ","-")+".html"
+        input = site.source + $cat_template
+        output = site.source + $cat_folder + curr
+        self.copy_template(input,output)              # create a file for each category in the $cat_folder        
         site.pages <<  CategoryPage.new(site, site.source, $cat_folder, curr, categories[category[0]])  
       end
     end
@@ -48,7 +48,7 @@ module Jekyll
 =begin
   Inherits the Page class due to add an available variable in every category page
 =end
- class CategoryPage < Page
+  class CategoryPage < Page
     def initialize(site, base, dir, name, category)
       super(site, base, dir, name)
       self.data['category'] = category

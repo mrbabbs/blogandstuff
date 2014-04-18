@@ -13,3 +13,7 @@ _posts/**
 # jekyll is always regenerating this folder content except "index.html"
 categories/**
 !categories/index.html
+
+# jekyll is always regenerating this folder content except "index.html"
+tags/**
+!tags/index.html
