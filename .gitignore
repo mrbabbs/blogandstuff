@@ -9,6 +9,7 @@ _site/**
 
 # that's better starting writing our own post for testing purpose
 _posts/**
+!_posts/2014-04-18-post-di-esempio.md
 
 # jekyll is always regenerating this folder content except "index.html"
 categories/**

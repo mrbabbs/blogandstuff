@@ -16,9 +16,9 @@ module Jekyll
       site.tags.each do |tag|
         tag[1].each do |post|
           if tags.has_key?(tag[0])
-            tags[tag[0]] << {"url"=>post.url, "title"=>post.title}
+            tags[tag[0]] << {"url"=>post.url, "title"=>post.title, "date"=>post.date, "content"=>post.content}
           else
-            tags[tag[0]] = [{"url"=>post.url, "title"=>post.title}]
+            tags[tag[0]] = [{"url"=>post.url, "title"=>post.title, "date"=>post.date, "content"=>post.content}]
           end   
         end
         input = site.source + $tag_template

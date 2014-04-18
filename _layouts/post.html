@@ -14,10 +14,13 @@ title: category
 			<span class="meta day">{{ page.date | date: "%d" }}</span>
 			<span class="meta month">{{ page.date | date: "%B" }}</span>
 			<span class="meta year">{{ page.date | date: "%Y" }}</span>
-		</p> 
+		</p>
+        <span class="no-display" itemprop="typicalAgeRange">{{ page.typical_age_range }}</span>
+        <span class="no-display" itemprop="timeRequired">{{ page.time_required }}</span>
+        <p itemprop="timeRequired">Time required: {{ page.time_required | replace: 'P','' | replace: 'M',' minutes' }} </p>
 	</header>
     <section>
-        <div  class="post">
+        <div class="post">
             <div itemprop="articleBody">			
                 {{ content }}
             </div>

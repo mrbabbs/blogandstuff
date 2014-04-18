@@ -5,7 +5,15 @@ layout: default
 <ul>
 	{% for post in page["category"] %}
 		<li>
-			<a href="{{post.url}}">{{post.title}}</a>
+			<span class="no-display" itemprop="dateCreated">{{ page.date }}</span>
+			<span class="meta day">{{ post.date | date: "%d" }}</span>
+			<span class="meta month">{{ post.date | date: "%B" }}</span>
+			<span class="meta year">{{ post.date | date: "%Y" }}</span>
+			&raquo; 
+			<a href="{{ post.url }}" itemprop="url">
+				<span itemprop="name">{{ post.title }}</span>
+			</a>
+			<span class="no-display" itemprop="wordCount">{{ page.content | number_of_words }}</div>
 		</li>
 	{% endfor %}
 </ul>

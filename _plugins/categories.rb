@@ -17,9 +17,9 @@ module Jekyll
       site.categories.each do |category|
         category[1].each do |post|
           if categories.has_key?(category[0])
-            categories[category[0]] << {"url"=>post.url, "title"=>post.title}
+            categories[category[0]] << {"url"=>post.url, "title"=>post.title,"date"=>post.date,"content"=>post.content}
           else
-            categories[category[0]] = [{"url"=>post.url, "title"=>post.title}]
+            categories[category[0]] = [{"url"=>post.url, "title"=>post.title,"date"=>post.date,"content"=>post.content}]
           end            
         end
         input = site.source + $cat_template
