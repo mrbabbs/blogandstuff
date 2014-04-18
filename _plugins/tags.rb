@@ -4,34 +4,31 @@
 
 =end 
 
-$tag_folder = "/tags/"                        # tags folder
-$tag_template = "/_layouts/tags.html"          # filename of the template (to put in $cat_folder)
-
-
 module Jekyll
-  class TagsGenerator < Generator
-    def generate(site)
-      tags = {}      
+  class TagsGenerator < Generator     
+     def generate(site)
+      tags = {}
+      mappings = {}
+      site.tags.keys.each do |k|            # create a mapping to change the keys
+        mappings[k] = k.gsub(" ","-")+".html" 
+      end
+      site.tags = Hash[site.tags.map {|k, v| [mappings[k], v] }]
       site.tags.each do |tag|
         tag[1].each do |post|
           if tags.has_key?(tag[0])
             tags[tag[0]] << {"url"=>post.url, "title"=>post.title}
           else
             tags[tag[0]] = [{"url"=>post.url, "title"=>post.title}]
-          end            
+          end   
         end
-      end
-      site.tags.each do |tag|              # for each tag write it in the proper file
-        curr = tag[0].gsub(" ","-")
         input = site.source + $tag_template
-        output = site.source + $tag_folder + curr
-        self.copy_template(input,output)              # create a file for each tag in the $cat_folder
-        site.pages <<  TagPage.new(site, site.source, $tag_folder, curr, tags[tag[0]])  
+        output = site.source + $tag_folder + tag[0]
+        self.copy_template(input,output)     # create a file for each tag in the $tag_folder
+        site.pages <<  TagPage.new(site, site.source, $tag_folder, tag[0], tags[tag[0]])  
       end
-    end 
-=begin
-  Copy the whole file "input" in the file "output"
-=end
+    end
+
+    #Copy the whole file "input" in the file "output"
     def copy_template(input, output)
       file = File.open(input, "r")
       f = File.open(output,"w")

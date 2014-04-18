@@ -24,13 +24,13 @@ title: category
             <div itemprop="articleSection">
                 Categories:
                 {% for category in page.categories %}
-                    <a href="{{site.cat_folder}}{{category}}.html">{{category}}</a>
+                    <a href="{{ site.cat_folder }}{{ category | replace: ' ','-' }}.html">{{category}}</a>
                 {% endfor %}
             </div>
             <div itemprop="keywords">
                 Tags:
                 {% for tag in page.tags %}
-                    <a href="{{site.tag_folder}}{{tag}}.html">{{tag}}</a>
+                    <a href="{{ site.tag_folder }}{{ tag | replace: ' ','-'  }}.html">{{tag}}</a>
                 {% endfor %}
             </div>
             <div itemprop="wordCount">
@@ -40,7 +40,7 @@ title: category
             <div class="related">
                 Related posts:
                 {% for related in site.related_posts %}
-                    <a href="{{related.url}}">{{related.title}}</a>
+                    <a href="{{ related.url }}">{{related.title}}</a>
                 {% endfor %}
             </div>
         </div> 

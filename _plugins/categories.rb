@@ -4,15 +4,16 @@
 
 =end 
 
-$cat_folder = "/categories/"                    # categories folder
-$cat_template = "/_layouts/categories.html"          # filename of the template (to put in $cat_folder)
-
-
 module Jekyll
   class CategoryGenerator < Generator
 
     def generate(site)
-      categories = {}      
+      categories = {}
+      mappings = {}
+      site.categories.keys.each do |k|            # create a mapping to change the keys
+        mappings[k] = k.gsub(" ","-")+".html" 
+      end
+      site.categories = Hash[site.categories.map {|k, v| [mappings[k], v] }]
       site.categories.each do |category|
         category[1].each do |post|
           if categories.has_key?(category[0])
@@ -21,19 +22,14 @@ module Jekyll
             categories[category[0]] = [{"url"=>post.url, "title"=>post.title}]
           end            
         end
-      end
-      site.categories.each do |category|              # for each category write it in the proper file
-        curr = category[0].gsub(" ","-")+".html"
         input = site.source + $cat_template
-        output = site.source + $cat_folder + curr
+        output = site.source + $cat_folder + category[0]
         self.copy_template(input,output)              # create a file for each category in the $cat_folder        
-        site.pages <<  CategoryPage.new(site, site.source, $cat_folder, curr, categories[category[0]])  
+        site.pages <<  CategoryPage.new(site, site.source, $cat_folder, category[0], categories[category[0]])  
       end
     end
 
-=begin
-  Copy the whole file "input" in the file "output"
-=end
+    # Copy the whole file "input" in the file "output"
     def copy_template(input, output)
       file = File.open(input, "r")
       f = File.open(output,"w")
@@ -43,6 +39,7 @@ module Jekyll
       f.close
       file.close
     end
+
   end
 
 =begin
