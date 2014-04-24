@@ -34,7 +34,5 @@ cat_folder: "/categories/"
 # folder to store post by tags N.B. if it has to be changed look up the "_plugins/tags.rb" file
 tag_folder: "/tags/"
 
-baseurl: "http://mrbabbs.github.com/blogandstuff"
-
 redcarpet:
   extensions: [strikethrough, tables]
