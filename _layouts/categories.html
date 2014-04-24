@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<ul>
+<ul itemscope itemtype="http://schema.org/BlogPosting">
 	{% for post in page["category"] %}
 		<li>
 			<span class="no-display" itemprop="dateCreated">{{ page.date }}</span>
@@ -13,7 +13,7 @@ layout: default
 			<a href="{{ post.url }}" itemprop="url">
 				<span itemprop="name">{{ post.title }}</span>
 			</a>
-			<span class="no-display" itemprop="wordCount">{{ page.content | number_of_words }}</div>
+			<span class="no-display" itemprop="wordCount">{{ page.content | number_of_words }}</span>
 		</li>
 	{% endfor %}
 </ul>
