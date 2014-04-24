@@ -1,14 +1,19 @@
 - url: /
   title: Home
+  name: "Blog&stuff"
 
 - url: /about/
   title: About
+  name: About us
 
 - url: /contact/
   title: Contatti
+  name: Contacts
 
 - url: /categories/
   title: Categorie
+  name: Categories
 
 - url: /tags/
   title: Tags
+  name: Tags
