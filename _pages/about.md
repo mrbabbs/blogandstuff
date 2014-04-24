@@ -1,7 +1,7 @@
 ---
 permalink: /about/
 layout: default
-title:  About Us
+title:  About us
 ---
 
 ####About us page
