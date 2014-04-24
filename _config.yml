@@ -11,6 +11,9 @@ authors:
     mrbabbs:
         display_name: Giovanni Esposito
         email: gioesps@gmail.com
+    alessandra:
+        display_name: Alessandra Manna
+        email: alessandra.manna89@gmail.com
 
 # pretty links
 permalink: '/:year/:title'
@@ -30,3 +33,8 @@ cat_folder: "/categories/"
 
 # folder to store post by tags N.B. if it has to be changed look up the "_plugins/tags.rb" file
 tag_folder: "/tags/"
+
+baseurl: "http://mrbabbs.github.com/blogandstuff"
+
+redcarpet:
+  extensions: [strikethrough, tables]
