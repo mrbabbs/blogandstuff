@@ -1,0 +1,14 @@
+- url: /
+  title: Home
+
+- url: /about/
+  title: About
+
+- url: /contact/
+  title: Contatti
+
+- url: /categories/
+  title: Categorie
+
+- url: /tags/
+  title: Tags
