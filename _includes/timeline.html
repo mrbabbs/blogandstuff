@@ -1,0 +1,22 @@
+<div class="container">	
+			<div class="main">
+				<ul class="cbp_tmtimeline">
+					{% for post in paginator.posts %}
+      					<li>
+      						<p>
+      							<time class="cbp_tmtime" datetime="2013-04-10 18:30">
+      								<span class="meta day">{{ post.date | date: "%d" }}</span>
+      								<span class="meta month">{{ post.date | date: "%B" }}</span>
+            						<span class="meta year">{{ post.date | date: "%Y" }}</span>
+      							</time>
+								<div class="cbp_tmicon cbp_tmicon-phone"></div>
+								<div class="cbp_tmlabel">
+	       						&raquo; <a class="post_title" href="{{ post.url }}">{{ post.title }}</a>
+	     			 		</p>
+	       					<p class="post-excerpt">{{ post.excerpt | strip_html }}&hellip; (<a href="{{ post.url }}">Read More</a>)</p>
+       					</li>
+    				{% endfor %}
+					
+				</ul>
+			</div>
+		</div>

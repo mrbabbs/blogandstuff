@@ -19,10 +19,14 @@
     <!-- some script is in footer.html -->
 
     <!-- stylesheets -->
-    <link rel="stylesheet" href="/assets/css/responsive.gs.12col.css">
-    <link rel="stylesheet" href="/assets/css/animate.min.css">
-    <link rel="stylesheet" href="/assets/css/main.css">
-
+    <link rel="stylesheet" type="text/css" href="/assets/css/responsive.gs.12col.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+    {% if page.title == "Blog&stuff" %}
+        <link rel="stylesheet" type="text/css" href="/assets/css/default.css" />
+        <link rel="stylesheet" type="text/css" href="/assets/css/component.css" />
+        <script src="/assets/js/modernizr.custom.js"></script>
+    {% endif %}
     <!-- Google fonts -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic&subset=latin-ext">
 
