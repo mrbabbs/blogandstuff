@@ -36,6 +36,3 @@ tag_folder: "/tags/"
 
 redcarpet:
   extensions: [strikethrough, tables]
-
-gems:
-- jekyll-compass

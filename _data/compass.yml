@@ -1,5 +1,0 @@
-sass_options:
-  unix_newlines: true
-
-import_paths:
-- assets/css
