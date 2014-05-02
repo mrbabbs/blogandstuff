@@ -18,3 +18,7 @@ categories/**
 # jekyll is always regenerating this folder content except "index.html"
 tags/**
 !tags/index.html
+
+# ignoring caching files
+
+.sass-cache/**
