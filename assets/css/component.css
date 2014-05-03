@@ -140,6 +140,11 @@
 	font-size: 1.7em;
 }
 
+.post-excerpt > a {
+	color: #333;
+}
+
+
 /* Example Media Queries */
 @media screen and (max-width: 65.375em) {
 
