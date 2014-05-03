@@ -141,6 +141,14 @@
 }
 
 .post-excerpt > a {
+	color: grey;
+}
+
+.post-excerpt > a:hover{
+	color: darken(grey, 20%);
+}
+
+.post-excerpt > a:visited{
 	color: #333;
 }
 
