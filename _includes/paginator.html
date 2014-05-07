@@ -1,6 +1,6 @@
 <!--  pagintator -->
 {% if paginator.total_pages > 1 %}
-    <div class="pagination">
+    <div>
         {% if paginator.previous_page %}
             <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">Prev</a>
         {% else %}

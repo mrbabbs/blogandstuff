@@ -23,7 +23,7 @@
 	top: 0;
 	bottom: 0;
 	width: 10px;
-	background: #fec083;
+	background: #ffe521;
 	left: 20%;
 	margin-left: -10px;
 }
@@ -42,23 +42,23 @@
 }
 
 .cbp_tmtimeline > li .cbp_tmtime span:first-child {
-	font-size: 2.9em;
-	color: #ff7e00;
+	font-size: 0.9em;
+	color: #bdd0db;
 }
 
 .cbp_tmtimeline > li .cbp_tmtime span:last-child {
-	font-size: 0.9em;
-	color: #fec083;
+	font-size: 2.9em;
+	color: #ff9c1e;
 }
 
 .cbp_tmtimeline > li:nth-child(odd) .cbp_tmtime span:last-child {
-	color: #ff7e00;
+	color: #ffcc0f;
 }
 
 /* Right content */
 .cbp_tmtimeline > li .cbp_tmlabel {
 	margin: 0 0 15px 25%;
-	background: #ff7e00;
+	background: #ff9c1e;
 	color: #fff;
 	padding: 2em;
 	font-size: 1.2em;
@@ -69,7 +69,7 @@
 }
 
 .cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel {
-	background: #ff7e00;
+	background: #ffcc0f;
 }
 
 .cbp_tmtimeline > li .cbp_tmlabel h2 { 
@@ -87,13 +87,13 @@
 	width: 0;
 	position: absolute;
 	pointer-events: none;
-	border-right-color: #ff7e00;
+	border-right-color: #ff9c1e;
 	border-width: 10px;
 	top: 10px;
 }
 
 .cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel:after {
-	border-right-color: #ff7e00;
+	border-right-color: #ffcc0f;
 }
 
 /* The icons */
@@ -111,9 +111,9 @@
 	-webkit-font-smoothing: antialiased;
 	position: absolute;
 	color: #fff;
-	background: #ff7e00;
+	background: #ffb41e;
 	border-radius: 50%;
-	box-shadow: 0 0 0 8px #fec083;
+	box-shadow: 0 0 0 8px #ffe521;
 	text-align: center;
 	left: 20%;
 	top: 0;
@@ -135,23 +135,6 @@
 .cbp_tmicon-earth:before {
 	content: "\e003";
 }
-
-.post_title{
-	font-size: 1.7em;
-}
-
-.post-excerpt > a {
-	color: grey;
-}
-
-.post-excerpt > a:hover{
-	color: darken(grey, 20%);
-}
-
-.post-excerpt > a:visited{
-	color: #333;
-}
-
 
 /* Example Media Queries */
 @media screen and (max-width: 65.375em) {
@@ -187,13 +170,13 @@
 		right: auto;
 		left: 20px;
 		border-right-color: transparent;
-		border-bottom-color: #3594cb;
+		border-bottom-color: #ff9c1e;
 		top: -20px;
 	}
 
 	.cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel:after {
 		border-right-color: transparent;
-		border-bottom-color: #ff7e00;
+		border-bottom-color: #ffcc0f;
 	}
 
 	.cbp_tmtimeline > li .cbp_tmicon {
@@ -202,5 +185,12 @@
 		left: auto;
 		margin: -55px 5px 0 0px;
 	}	
+}
+
+/*Custom*/
+
+/*Without this, the icon are not showed */
+.cbp_tmtimeline > li{
+    position: relative;
 }
 
