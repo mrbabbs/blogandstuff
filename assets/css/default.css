@@ -20,12 +20,13 @@ body {
 }
 
 a {
-	color: #f0f0f0;
+	color: #000;
 	text-decoration: none;
 }
 
 a:hover {
-	color: #000;
+	/*color: #f0f0f0;*/
+    color:#969696;
 }
 
 #container{
@@ -85,17 +86,11 @@ img{
     font-size: 1.2em;
 }
 
-.Home {
-    width:70px;
+.no-display {
+  display:none;
 }
 
-.About {
-    width:70px;
-}
 
-.Tags{
-    width:70px;
-}
 
 /*	COLUMN WIDTH ON DISPLAYS <768px 
 	You might need to play with media queries here to suite your design. */

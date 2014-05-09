@@ -1,9 +1,9 @@
-<nav >
+<nav>
     {% for link in site.data.links %}
-    	<span class="nav {{ link.title }}">
-        	<a href="{{ link.url }}"
+    	<span class="nav">
+        	<a href="{{ link.url }}" title="{{ link.title }}"
         	{% if page.title == link.name %}{% endif %}>
-        		<img src="../assets/images/{{ link.title }}.png">
+        	{{ link.title }}
         	</a>
     	</span>
     {% endfor %}
