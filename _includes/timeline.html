@@ -1,18 +1,18 @@
 
     {% for post in paginator.posts %}
 		<li>
-	        <time class="cbp_tmtime" datetime="2013-04-10 18:30">
-                <span>{{ post.date | date: "%Y" }}</span>
-                <span>{{ post.date | date: "%d %B" }}</span>
-            </time>
             {% if post.author == "fenix" %}
-            	<div class="cbp_tmicon icon-fra"></div>
+                <div class="icon-fra"></div>
             {% elsif post.author == "alessandra" %}
-            	<div class="cbp_tmicon icon-ale"></div>
+                <div class="icon-ale"></div>
             {% else %}
-            	<div class="cbp_tmicon icon-gio"></div>
+                <div class="icon-gio"></div>
             {% endif %}
-	        <div class="cbp_tmlabel">
+	        <time datetime="{{post.date}}">
+                <span>{{ post.date | date: "%d %B" }}</span>
+                <span>{{ post.date | date: "%Y" }}</span>
+            </time>
+	        <div>
 		        <h2><a class="post_title" href="{{ post.url }}">{{ post.title }}</a></h2>
 		        <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 280 }}&hellip; (<a href="{{ post.url }}">Read More</a>)</p>
 	        </div>

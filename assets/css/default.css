@@ -11,7 +11,10 @@
 	font-style: normal;
 }
 
-*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; text-decoration: none; outline: 0}
+
+ul,li {list-style: none}
+
 body, html { font-size: 100%; padding: 0; margin: 0;}
 
 body {
