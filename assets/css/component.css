@@ -46,13 +46,13 @@
 .cbp_tmtimeline > li .cbp_tmtime {
 	display: block;
 	width: 25%;
-	margin: 0px 0px 0px 190px;
+	margin: 0px 0px 0px 15%;
 	/*padding-right: 100px;*/
 	position: absolute;
 }
 
 .cbp_tmtimeline > li:nth-child(odd) .cbp_tmtime {
-	margin: 0px 0px 0px 490px;
+	margin: 0px 0px 0px 50%;
 }
 
 .cbp_tmtimeline > li .cbp_tmtime span {
@@ -90,9 +90,9 @@
 	/**content:url("../images/bubbledx.png");**/
 	/**background-image: url(../images/bubbledx.png);**/
 	margin: 0 0 25px 53%;
+	padding: 1.5em 2.5em 2em 3.2em;
 	/*background: #ff9c1e;*/
 	color: #000000;
-	padding: 1.5em 2em 2em 2em;
 	text-align: justify;
 	font-size: 1.2em;
 	font-weight: 300;
@@ -100,8 +100,8 @@
 	position: relative;
 	/*border-radius: 5px;*/
 	background-image: url(../images/bubbledx1.png);
-	background-size: 520px 330px;
-	background-position: top 5px left -6px;
+	background-size: 100% 100%;
+	background-position: top 5px left 6px;
 	background-repeat: no-repeat;
 	/*height:290px;*/
 }
@@ -109,11 +109,12 @@
 /** odd children **/
 .cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel {
 	margin:0 53% 25px 0;
+	padding: 1.5em 3.5em 3em 2.5em;
 	/*background: #ffcc0f;*/
 	background-image: url(../images/bubblesx1.png);
-	background-size: 520px 340px;
-	background-position: top 5px left -10px;
-	background-repeat: no-repeat;
+	/*background-size: 520px 340px;
+	background-size: 100% 100%;*/
+	background-position: top 5px left -6px;
 }
 
 /** triangle's color **/
@@ -186,6 +187,19 @@
 	}
 }
 
+
+@media screen and (max-width: 55em){
+
+	.cbp_tmtimeline > li .cbp_tmlabel {
+		background-image: url(../images/bubblesx2.png);
+	}
+
+	.cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel {
+		background-image: url(../images/bubblesx2.png);
+	}
+
+}
+
 @media screen and (max-width: 47.2em) {
 	.cbp_tmtimeline:before {
 		display: none;
@@ -198,20 +212,28 @@
 		margin: 0px 0px 0px 0px;
 	}
 
+	.cbp_tmtimeline > li:nth-child(odd) .cbp_tmtime {
+		margin: 0px 0px 0px 0px;
+	}
+
 	.cbp_tmtimeline > li .cbp_tmtime span {
 		text-align: left;
 	}
 
 	.cbp_tmtimeline > li .cbp_tmlabel {
 		margin: 0 0 30px 0;
-		padding: 1em;
+		padding: 2em 3.5em 0em 3.5em;		
+		/*background-image: url(../images/bubblesx2.png);*/
+		background-position: top 5px left -6px;
 		font-weight: 400;
 		font-size: 95%;
 	}
 
 	.cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel {
 		margin: 0 0 30px 0;
-		padding: 1em;
+		/*padding: 1em;*/
+		/*background-image: url(../images/bubblesx2.png);*/
+		padding: 2em 3.5em 0em 3.5em;
 		font-weight: 400;
 		font-size: 95%;
 	}
