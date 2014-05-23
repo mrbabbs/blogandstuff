@@ -39,18 +39,12 @@ a:hover {
 	max-width: 69em;
 	margin: 0 auto;
 	padding-right: 1.875em;
-    float: left;
 }
 
-#menu{
-    width: 20%;
-    margin: 0 auto;
-    float: right;
-}
 
-img{
+/*img{
     width: 100%;
-}
+}*/
 
 .clear{
     clear: both;
@@ -59,32 +53,52 @@ img{
 .cover{
     width:40%;
     height:60%;
-    margin:5% 30% 5% 30%;
+    margin:8% 30% 5% 30%;
 }
 
 .colordiv{
     top:50%;
     width:100%;
     height: 500px;
-    background-color: black;
+    /*background-color: black;*/
     margin-bottom: 10%
 }
 
-.nav{
-    display: block;
-    width: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+#menu{
+    position: fixed;
+    width:100%;
+    height: 63px;
 }
 
 
-.nav > a {
+.menu_item{
+    padding:0px 4% 0px 4%;
+    text-decoration: none;
+    line-height: 3em;
+    font-size: 1.2em;
+
+}
+
+/*inutile*/
+/*.menu_item > a {
     text-decoration: none;
     line-height: 3em;
    /* font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;*/
-    font-size: 1.2em;
+   /* font-size: 1.2em;
+}*/
+
+nav{
+    width:500px;
+    margin: 0 0 0 3%;
 }
+
+#menu img{
+    width:150px;
+    height:54px;
+    margin:3px 3%;
+    float:right;
+}
+
 
 .no-display {
   display:none;
@@ -95,14 +109,40 @@ img{
 /*	COLUMN WIDTH ON DISPLAYS <768px 
 	You might need to play with media queries here to suite your design. */
 @media ( max-width : 768px ) {
-    #menu{
-        float:left;
-        width: 100%;
-    }
 
     #home{
         width: 100%;
         padding: 0;
     }
+}
+
+
+@media screen and (max-width: 755px) {   
+
+    nav{
+        float: right;
+    }
+
+    #menu img{
+        display:block;
+    }
+
+    .menu_item{
+        display:block;
+        text-align: right;
+        margin:0 7%;
+    }
+
+    
+    #ddmenu li {
+        text-align:left;
+        width:50%; /*or 33%*/
+        border-bottom: 1px dotted #6677AA;  
+    }
+    #ddmenu li.hide1 {display:none;}/*hide elements that is not needed in this layout*/
+    
+    #ddmenu a {
+        padding:0 50px;
+    }    
 }
 

@@ -1,6 +1,6 @@
 <nav>
     {% for link in site.data.links %}
-    	<span class="nav">
+    	<span class="menu_item">
         	<a href="{{ link.url }}" title="{{ link.title }}"
         	{% if page.title == link.name %}{% endif %}>
         	{{ link.title }}
