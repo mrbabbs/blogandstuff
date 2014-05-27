@@ -89,14 +89,31 @@ $(function() {
 
   function fetchPostWithIndex(index, callback) {
     var postURL = postURLs[index];
-
-    $.get(postURL, function(data) {
-      var a = $(data).find(".post");
-      alert("sei stata zitta tutto il tempo in pizzeria "+a.contents());
-      console.log(a);
-      a.appendTo(".cbp_tmtimeline");
+    var html = '
+    <li class="post">
+          <time class="cbp_tmtime" datetime="2013-04-10 18:30">
+                <span>'+data['posts'][index]['date']+'</span>
+                <span>'+data['posts'][index]['date']+'</span>
+          </time>
+          {% if post.author == "fenix" %}
+            <div class="cbp_tmicon icon-fra"></div>
+          {% elsif post.author == "alessandra" %}
+            <div class="cbp_tmicon icon-ale"></div>
+          {% else %}
+             <div class="cbp_tmicon icon-gio"></div>
+          {% endif %}
+          <div class="cbp_tmlabel">
+            <h2><a class="post_title" href="{{ post.url }}">{{ post.title }}</a></h2>
+            <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 250 }}&hellip; (<a href="{{ post.url }}">Read More</a>)</p>
+          </div>
+    </li>';
+    //$.get(postURL, function(data) {
+      //var a = $(data).find(".post");
+      //alert("sei stata zitta tutto il tempo in pizzeria "+a.contents());
+      console.log(html);
+      html.appendTo(".cbp_tmtimeline");
       callback();
-    });
+    //});
   }
   
   function disableFetching() {
