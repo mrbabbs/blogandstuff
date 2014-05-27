@@ -67,37 +67,33 @@ a:hover {
 #menu{
     position: fixed;
     width:100%;
-    height: 63px;
+    height: 53px;
+    background-color: white;
+    z-index: 10;
 }
 
-
-.menu_item{
-    padding:0px 4% 0px 4%;
-    text-decoration: none;
-    line-height: 3em;
-    font-size: 1.2em;
-
-}
-
-/*inutile*/
-/*.menu_item > a {
-    text-decoration: none;
-    line-height: 3em;
-   /* font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;*/
-   /* font-size: 1.2em;
-}*/
 
 nav{
     width:500px;
     margin: 0 0 0 3%;
 }
 
+.menu_item{
+    padding:0px 4% 0px 4%;
+    text-decoration: none;
+    line-height: 3em;
+    font-size: 1em;
+
+}
+
+
 #menu img{
     width:150px;
     height:54px;
-    margin:3px 3%;
+    margin:0px 3%;
     float:right;
 }
+
 
 
 .no-display {
