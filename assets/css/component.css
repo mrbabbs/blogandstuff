@@ -143,14 +143,24 @@
 }
 */
 
-/* The line */
+/* The line 
 .cbp_tmtimeline:before {
-	content: url(../images/line.png);
+	content: url(../images/line.png) repeat-y;
 	position: absolute;
 	top: 40px;
 	bottom: 0;
 	/**background: #ff5e00;**/
-	left: 50%;
+	/*left: 50%;
+	margin-left: -20px;
+}*/
+
+.cbp_tmtimeline {
+	background: url(../images/line.png) repeat-y;
+	background-position: center;
+	/**background: #ff5e00;**/
+	width: 74%;
+	left: 13%;
+	position: absolute;
 	margin-left: -20px;
 }
 

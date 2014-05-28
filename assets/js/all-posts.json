@@ -9,7 +9,7 @@ layout: none
     	"title" : "{{ post.title }}",
    		"author" : "{{ post.author }}",
     	"date" : "{{ post.date }}",
-    	"excerpt": "{{ post.excerpt | strip_html | truncatewords: 55 }}"
+    	"excerpt": "{{ post.excerpt | strip_html | truncatewords: 43 }}"
     }{% unless forloop.last %},{% endunless %}
     {% endfor %}
   	]
