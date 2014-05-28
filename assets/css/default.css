@@ -66,6 +66,7 @@ a:hover {
 
 #menu{
     position: fixed;
+    top:0;
     width:100%;
     height: 53px;
     background-color: white;
@@ -139,6 +140,11 @@ nav{
   display:none;
 }
 
+
+.article{
+    position:absolute;
+    top:80px;
+}
 
 
 /*	COLUMN WIDTH ON DISPLAYS <768px 
