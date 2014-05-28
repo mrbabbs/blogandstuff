@@ -2,7 +2,9 @@
     {% for link in site.data.links %}
     	<span class="menu_item">
         	<a href="{{ link.url }}" title="{{ link.title }}"
-        	{% if page.title == link.name %}{% endif %}>
+        	{% if page.title == link.name %}
+        		--id="current_page"--
+        	{% endif %}>
         	{{ link.title }}
         	</a>
     	</span>

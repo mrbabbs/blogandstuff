@@ -99,11 +99,11 @@ $(function() {
       var date = a['date'];
       var parts = date.split(' ')[0];
       parts = parts.split('-');
-      var d = new Date(parts[0], parts[1]-1, parts[2]);
-      var dd = d.toString().split(' ');
+      var months = [ "January", "February", "March", "April", "May", "June", 
+               "July", "August", "September", "October", "November", "December" ];
       var html = '<li class="post"><time class="cbp_tmtime">\
-                <span>'+dd[3]+'</span>\
-                <span>'+dd[2]+' '+d.getMonth()+'</span>\
+                <span>'+parts[0]+'</span>\
+                <span>'+parts[2]+' '+months[(parts[1]-1)]+'</span>\
             </time>';
       if (a['author'] === "fenix")
           html+='<div class="cbp_tmicon icon-fra"></div>';
