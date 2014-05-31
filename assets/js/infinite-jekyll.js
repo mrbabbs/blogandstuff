@@ -1,10 +1,17 @@
+---
+---
 $(function() {
   
   var page = 2,
       isFetchingPosts = false,
       shouldFetchPosts = true,
       loadNewPostsThreshold = 200,
-      path = "page";
+      path = "page",
+      paginate = {{ site.paginate }},
+      posts = [ {% for post in site.posts %}
+                "{{ post.url }}"{% unless forloop.last %},{% endunless %}
+              {% endfor %},],
+      pages = posts.length / paginate + 1;
       url = window.location.href+path;
   
   // If there's no spinner, it's not a page where posts should be fetched
@@ -33,10 +40,11 @@ $(function() {
     // Load as many posts as there were present on the page when it loaded
     // After successfully loading a post, load the next one
     var callback = function(disable) {
-          if(disable)
+          page++;
+          if(page > pages)
             disableFetching();
           
-          page++;
+          
           isFetchingPosts = false;
           
         };
@@ -50,12 +58,9 @@ $(function() {
         disable = false;
 
     $.get(postURL, function(data) {
-
-      if($(data).children().size()< 1)
-        disable = true;
         
       $(data).appendTo(".cbp_tmtimeline");
-      callback(disable);
+      callback();
     });
   }
   
@@ -63,7 +68,6 @@ $(function() {
     shouldFetchPosts = false;
     isFetchingPosts = false;
     $(".infinite-spinner").fadeOut();
-    console.log("end");
   }
 
 });
