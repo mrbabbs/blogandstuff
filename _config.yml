@@ -20,6 +20,7 @@ permalink: '/:year/:title'
 
 # pagination stuff 
 paginate: 3
+paginate_path: 'page:num'
 
 # include of new folder "_pages" where we can write our markdown pages
 include: ['_pages']

@@ -5,15 +5,18 @@ $(function() {
   var page = 2,
       isFetchingPosts = false,
       shouldFetchPosts = true,
-      loadNewPostsThreshold = 200,
-      path = "page",
+      loadNewPostsThreshold = 250, // customized
+      tmp = "{{ site.['paginate_path'] }}",
+      path = tmp.split(":")[0];
       paginate = {{ site.paginate }},
-      posts = [ {% for post in site.posts %}
-                "{{ post.url }}"{% unless forloop.last %},{% endunless %}
-              {% endfor %},],
-      pages = posts.length / paginate + 1;
+      numPosts = {{ site.posts | size }}
+      pages = numPosts / paginate;
+
+      if((numPosts % paginate) > 0)
+        pages++;
+
       url = window.location.href+path;
-  
+
   // If there's no spinner, it's not a page where posts should be fetched
   if ($(".infinite-spinner").length < 1)
     shouldFetchPosts = false;
@@ -34,25 +37,22 @@ $(function() {
     }
   });
   
-  // Fetch a chunk of posts
+  // Fetch a page of posts
   function fetchPosts() {
     isFetchingPosts = true;
-    // Load as many posts as there were present on the page when it loaded
-    // After successfully loading a post, load the next one
+
+    // check if there are pages to load
     var callback = function(disable) {
           page++;
           if(page > pages)
             disableFetching();
           
-          
           isFetchingPosts = false;
-          
         };
-    
-    
     fetchPostWithIndex(page, url, callback);
   }
 
+  // load preview pages to append
   function fetchPostWithIndex(page, url, callback) {
     var postURL = url+page+"/",
         disable = false;
@@ -64,6 +64,7 @@ $(function() {
     });
   }
   
+  // disable fetching page
   function disableFetching() {
     shouldFetchPosts = false;
     isFetchingPosts = false;
