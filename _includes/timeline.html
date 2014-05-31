@@ -1,25 +1,5 @@
 
     <ul class="cbp_tmtimeline">
-    {% for post in site.posts limit:3 %}
-		<li class="post">
-	        <time class="cbp_tmtime" datetime="2013-04-10 18:30">
-                <span>{{ post.date | date: "%Y" }}</span>
-                <span>{{ post.date | date: "%d %B" }}</span>
-            </time>
-            {% if post.author == "fenix" %}
-            	<div class="cbp_tmicon icon-fra"></div>
-            {% elsif post.author == "alessandra" %}
-            	<div class="cbp_tmicon icon-ale"></div>
-            {% else %}
-            	<div class="cbp_tmicon icon-gio"></div>
-            {% endif %}
-	        <div class="cbp_tmlabel">
-		        <h2><a class="post_title" href="{{ post.url }}">{{ post.title }}</a></h2>
-		        <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 250 }}&hellip; (<a href="{{ post.url }}">Read More</a>)</p>
-	        </div>
-        </li>
-    {% endfor %}
-</ul>
-<div class="infinite-spinner"></div>
-   
-
+        {% include preview.html %}
+    </ul>
+    <div class="infinite-spinner"></div>
